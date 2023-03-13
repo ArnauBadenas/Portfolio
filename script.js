@@ -3,7 +3,13 @@ window.onload = function() {
       selector: '.background',
       //color: 'red',
       connectParticles: true,
-      responsive:true
+      responsive: [{
+        breakpoint: 800,
+        options: {
+          maxParticles: 50,
+          connectParticles: true
+        }
+      }]
     });
   };
   //https://github.com/marcbruederlin/particles.js
