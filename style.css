@@ -17,7 +17,14 @@ body {
 
 
 /* Main */
-
+#projects{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+.project{
+    margin: 1rem 1rem;
+    border: 1px solid black;
+}
 
 /* Footer */
 .contact-grid{
@@ -25,13 +32,4 @@ body {
 }
 .contact-grid article{
     width: 100%;
-}
-
-
-menu {
-    display: block;
-    list-style: none;
-}
-menu li{
-    margin: 0 20px;
 }
