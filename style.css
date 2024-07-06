@@ -20,11 +20,27 @@ body {
 #projects{
     display: grid;
     grid-template-columns: repeat(3,1fr);
+    grid-gap: 50px;
 }
 .project{
-    margin: 1rem 1rem;
     border: 1px solid black;
 }
+
+.tools-category {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .tool {
+    text-align: center;
+  }
+  
+  .tool img {
+    width: 50px;
+    height: 50px;
+  }
+  
 
 /* Footer */
 .contact-grid{

@@ -1,0 +1,41 @@
+{
+    "aboutMe": {
+      "name": "Arnau Badenas",
+      "description": "Hi, I'm Arnau, a web developer with a lot of passion for bringing projects to life.",
+      "additionalInfo": [
+        "I like to create clean, user-friendly designs that are optimized for performance and scalability.",
+        "In my free time, I enjoy playing volleyball, exploring the latest video games, and playing guitar."
+      ]
+    },
+    "tools": {
+      "Essentials": ["linux", "windows", "git", "stackoverflow", "unity"],
+      "Programming Languages And Web Programming": ["js", "ts", "cs", "php", "py", "angular", "vue", "nodejs", "express", "laravel"],
+      "Web Design and Deployment": ["html", "css", "sass", "tailwind", "bootstrap", "figma", "docker", "aws", "vercel"],
+      "Databases": ["mysql", "postgres", "mongodb", "sqlite"]
+    },
+    "projects": [
+      {
+        "title": "Project 1",
+        "description": "A brief description of Project 1.",
+        "link": "http://link-to-project1.com",
+        "image": "http://link-to-project1-image.com",
+        "technologies": ["HTML", "CSS", "JavaScript"]
+      },
+      {
+        "title": "Project 2",
+        "description": "A brief description of Project 2.",
+        "link": "http://link-to-project2.com",
+        "image": "http://link-to-project2-image.com",
+        "technologies": ["PHP", "MySQL"]
+      }
+    ],
+    "contact": {
+      "email": "4bvives@gmail.com",
+      "phone": "+34 640386261",
+      "linkedin": {
+        "url": "https://www.linkedin.com/in/arnau-badenas-vives-712464226/",
+        "name": "@arnaubadenasvives"
+      }
+    }
+  }
+  
