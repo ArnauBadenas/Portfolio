@@ -1,7 +1,12 @@
+---
+import { Image } from 'astro:assets';
+import profileImage from '../assets/img/arnau.jpeg';
+---
+
 <header class="flex justify-between items-center py-3 w-[1120px] mx-auto">
-	<img
+	<Image
 		class="rounded-full w-12 h-12"
-		src="../assets/img/arnau.jpeg"
+		src={profileImage}
 		alt="arnau photo"
 	/>
 	<nav class="flex flex-row gap-x-10 opacity-80">
