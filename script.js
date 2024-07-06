@@ -29,11 +29,12 @@ document.addEventListener('DOMContentLoaded', () => {
       const projectsSection = document.getElementById('projects');
       const projectsContent = data.projects.map(project => `
         <div class="project">
+        <a href="${project.link}">
           <h2>${project.title}</h2>
           <img src="${project.image}" alt="${project.title}">
           <p>${project.description}</p>
-          <a href="${project.link}">View Project</a>
           <p>Technologies: ${project.technologies.join(', ')}</p>
+        </a>
         </div>
       `).join('');
       projectsSection.innerHTML = projectsContent;

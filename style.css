@@ -1,51 +1,111 @@
 body {
-    font-family: "Open Sans", Arial;
+    font-family: "Open Sans", Arial, sans-serif;
     color: #454545;
     margin: 2em auto;
-    max-width: 800px;
+    max-width: 1250px;
     padding: 1em;
-    line-height: 1.4;
+    line-height: 1.6;
     -webkit-hyphens: auto;
     -ms-hyphens: auto;
     hyphens: auto;
 }
 
-/* Generic styles */
+a {
+    color: #007bff; /* Adjust link color to match your theme */
+    text-decoration: none;
+}
 
+a:hover {
+    text-decoration: underline;
+}
 
-/* Header */
+p {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 1em;
+}
 
+/* Set a maximum width for images within content */
+img {
+    max-width: 100%;
+    height: auto;
+}
 
-/* Main */
-#projects{
+/* Responsive Grid for Projects */
+#projects {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-gap: 50px;
-}
-.project{
-    border: 1px solid black;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
 }
 
+.project {
+    border: 1px solid #ddd; /* Light border around projects */
+    padding: 20px;
+    transition: transform 0.2s ease-in-out; /* Smooth hover effect */
+}
+
+.project:hover {
+    transform: translateY(-5px); /* Lift project box on hover */
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px; /* Rounded corners for project images */
+}
+
+.project a{
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Styling for Tools Section */
 .tools-category {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-  }
-  
-  .tool {
+}
+
+.tool {
     text-align: center;
-  }
-  
-  .tool img {
+    
+}
+
+.tool img {
     width: 50px;
     height: 50px;
-  }
-  
+}
 
 /* Footer */
-.contact-grid{
-    display: flex;
+footer {
+    margin-top: 2em;
+    padding-top: 1em;
+    border-top: 1px solid #ddd; /* Divider above footer content */
 }
-.contact-grid article{
-    width: 100%;
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.contact-grid article {
+    padding: 10px;
+    background-color: #f9f9f9; /* Light background color for contact items */
+    border: 1px solid #ddd;
+}
+
+.contact-grid article h3 {
+    margin-bottom: 0.5em;
+    font-size: 1.2em;
+}
+
+.contact-grid article a,
+.contact-grid article p {
+    color: #333; /* Darker text color for contact information */
+    margin-bottom: 0.5em;
+}
+
+.contact-grid article a:hover {
+    text-decoration: underline;
 }
