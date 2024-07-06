@@ -1,0 +1,29 @@
+---
+import ExperienceItem from './ExperienceItem.astro';
+const EXPERIENCE = [
+	{
+		date: 'Abril 2024',
+		title: 'IRIS Technology Solutions - Desarrollador web en prácticas',
+		description:
+			'Desarrollo aplicaciones relacionadas con la gestión de documentos e información con IA usando la API de OpenAI y Python. Diseño páginas accesibles con Angular. Interconecto páginas con base de datos construyendo APIs con Node.js. Uso CI/CD para el despliegue continuo de funciones del producto.',
+		link: 'https://www.iris-eng.com/es/',
+	},
+	{
+		date: 'Junio 2022',
+		title: 'TÀCTIC.cat - Maquetador de wordpress en prácticas',
+		description:
+			'Creo y mantengo páginas usando WordPress y plug-ins como WooCommerce para la gestión de comercio electrónico. Optimizo SEO para la visualización en motores de búsqueda. Aplico diseños atractivos y fáciles de usar.',
+		link: 'https://tactic.cat/',
+	},
+];
+---
+
+<ol class="relative border-s border-gray-200 ml-3">
+	{
+		EXPERIENCE.map((experience) => (
+			<li class="mb-10 ms-4">
+				<ExperienceItem {...experience} />
+			</li>
+		))
+	}
+</ol>

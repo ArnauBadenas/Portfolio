@@ -1,22 +1,67 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Badge from '../components/Badge.astro';
-
+import SectionContainer from '../components/SectionContainer.astro';
+import LinkedInIcon from '../components/icons/LinkedIn.astro';
+import GithubIcon from '../components/icons/Github.astro';
+import TieIcon from '../components/icons/Tie.astro';
+import GmailIcon from '../components/icons/Gmail.astro';
+import SocialPill from '../components/SocialPill.astro';
+import Experience from '../components/Experience.astro';
+import { Image } from 'astro:assets';
+import profileImage from '../assets/img/arnau.jpeg';
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout
+	title="Portfolio de Arnau Badenas - Desarrollador y programador web y videojuegos"
+	description="Contacta conmigo para colaborar en proyectos desarrollando webs o juegos accesibles para todos.">
 	<main>
-		<section class="w-full mx-auto lg:w-[740px] py-44">
+		<SectionContainer
+			id="home"
+			class="py-44">
+			<Image
+				class="rounded-full w-12 h-12"
+				src={profileImage}
+				alt="arnau"
+				loading="eager"
+			/>
 			<h1
-				class="text-white text-5xl font-bold flex justify-center flex-row gap-x-4 pb-4">
-				Hi, I'm Arnau <div class="flex justify-center items-center">
-					<Badge>Buscando trabajo</Badge>
+				class="text-white text-3xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-4">
+				¡Hola! Soy Arnau. <div class="flex justify-center items-center">
+					<Badge>Trabajemos juntos!</Badge>
 				</div>
 			</h1>
-			<h2 class="text-xl opacity-80">
-				Desarrollador Web y técnico Informático. De Mataró, España.
-				Especializado en crear experiencias aptas para todos.
+			<h2 class="text-2xl opacity-80 text-wrap">
+				<span class="text-orange-400/90"
+					>Desarrollador Web y técnico Informático.</span
+				>
+				<span class="text-blue-100/90">De Mataró, España.</span>
+				<span class="opacity-60"
+					>Especializado en crear experiencias aptas para todos.</span
+				>
 			</h2>
-		</section>
+
+			<ul class="flex gap-x-4 mt-5">
+				<SocialPill
+					href="https://www.linkedin.com/in/arnau-badenas-vives/">
+					<LinkedInIcon class="size-6" />
+					LinkedIn
+				</SocialPill>
+				<SocialPill href="https://github.com/ArnauBadenas">
+					<GithubIcon class="size-6" />
+					Github
+				</SocialPill>
+				<SocialPill href="mailto:4bvives@gmail.com">
+					<GmailIcon class="size-6" />
+					4bvives@gmail.com
+				</SocialPill>
+			</ul>
+		</SectionContainer>
+		<SectionContainer id="experience">
+			<h2 class="text-2xl font-semibold flex gap-x-3 items-center pb-5">
+				<TieIcon class="size-7" /> Experiencia laboral
+			</h2>
+			<Experience />
+		</SectionContainer>
 	</main>
 </Layout>
