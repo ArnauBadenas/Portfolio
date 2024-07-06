@@ -25,32 +25,47 @@ const PROJECTS = [
 		image: 'https://img.itch.zone/aW1nLzE0NjYxNzQ1LnBuZw==/315x250%23c/2WM92r.png',
 		tags: [TAGS.UNITY, TAGS.CSHARP],
 	},
+	{
+		title: 'A little help',
+		description:
+			'Un juego sobre cómo tus acciones pueden impactar a los demás.',
+		link: 'https://arnaubv.itch.io/a-little-help',
+		github: 'https://github.com/ArnauBadenas/GamejaNavideja2022',
+		image: 'https://img.itch.zone/aW1nLzEwOTM4NTQ5LnBuZw==/315x250%23c/9UyZ8b.png',
+		tags: [TAGS.UNITY, TAGS.CSHARP],
+	},
 ];
 ---
 
-{
-	PROJECTS.map(({ title, description, link, github, image, tags }) => (
-		<article>
-			<a href={link} target="_blank">
-				<img
-					class="border rounded shadow-2xl shadow-white/10 hover:scale-[101%] cursor-pointer"
-					src={image}
-					alt={title}
-				/>
-			</a>
-			<h3 class="text-2xl font-semibold text-orange-200 mb-2">{title}</h3>
-			<p class="text-lg mb-4 text-pretty">{description}</p>
-			<ul class="flex gap-x-2">
-				{tags.map((tag) => (
-					<li>
-						<span
-							class={`flex items-center gap-x-2 rounded-full text-sm py-1 px-2 ${tag.class}`}>
-							<tag.icon class="size-4" />
-							{tag.name}
-						</span>
-					</li>
-				))}
-			</ul>
-		</article>
-	))
-}
+<section class="grid sm:grid-cols-1 md:grid-cols-2 gap-4">
+	{
+		PROJECTS.map(({ title, description, link, github, image, tags }) => (
+			<article class="py-2">
+				<a
+					href={link}
+					target="_blank">
+					<img
+						class="border rounded shadow-2xl shadow-white/10 hover:scale-[102%] cursor-pointer"
+						src={image}
+						alt={title}
+					/>
+				</a>
+				<h3 class="text-2xl font-semibold text-orange-200 mb-2">
+					{title}
+				</h3>
+				<p class="text-lg mb-4 text-pretty">{description}</p>
+				<ul class="flex gap-x-2">
+					{tags.map((tag) => (
+						<li>
+							<span
+								class={`flex items-center gap-x-2 rounded-full text-sm py-1 px-2 ${tag.class}`}>
+								<tag.icon class="size-4" />
+								{tag.name}
+							</span>
+						</li>
+					))}
+				</ul>
+			</article>
+		))
+	}
+</section>
