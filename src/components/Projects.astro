@@ -1,0 +1,55 @@
+---
+import CSHARPIcon from './icons/Csharp.astro';
+import UnityIcon from './icons/Unity.astro';
+
+const TAGS = {
+	CSHARP: {
+		name: 'C#',
+		class: 'bg-fuchsia-800/80 text-white',
+		icon: CSHARPIcon,
+	},
+	UNITY: {
+		name: 'Unity',
+		class: 'bg-black/80 text-white',
+		icon: UnityIcon,
+	},
+};
+
+const PROJECTS = [
+	{
+		title: 'ダンダン ギャンブル (Dan Dan Gamble)',
+		description:
+			'みんなのガムブル es un juego de apuestas donde debes ganar contra la gente mas peligrosa de japón',
+		link: 'https://arnaubv.itch.io/dan-dan-gamble',
+		github: 'https://github.com/ArnauBadenas/gameja2024ocatus',
+		image: 'https://img.itch.zone/aW1nLzE0NjYxNzQ1LnBuZw==/315x250%23c/2WM92r.png',
+		tags: [TAGS.UNITY, TAGS.CSHARP],
+	},
+];
+---
+
+{
+	PROJECTS.map(({ title, description, link, github, image, tags }) => (
+		<article>
+			<img
+				class="border rounded shadow-2xl shadow-white/10"
+				src={image}
+				alt={title}
+			/>
+			<h3 class="text-2xl font-semibold text-orange-200 mb-2">{title}</h3>
+			<p class="text-lg mb-4 text-pretty">{description}</p>
+			<ul class="flex gap-x-2">
+				{tags.map((tag) => (
+					<li>
+						<span
+							class={`flex items-center gap-x-2 rounded-full text-sm py-1 px-2 ${tag.class}`}>
+							<tag.icon class="size-4" />
+							{tag.name}
+						</span>
+					</li>
+				))}
+			</ul>
+			
+		</article>
+	))
+}

@@ -6,32 +6,34 @@ import LinkedInIcon from '../components/icons/LinkedIn.astro';
 import GithubIcon from '../components/icons/Github.astro';
 import TieIcon from '../components/icons/Tie.astro';
 import GmailIcon from '../components/icons/Gmail.astro';
+import PromptIcon from '../components/icons/Prompt.astro';
 import SocialPill from '../components/SocialPill.astro';
 import Experience from '../components/Experience.astro';
+import Projects from '../components/Projects.astro';
 import { Image } from 'astro:assets';
-import profileImage from '../assets/img/arnau.jpeg';
+import profileImage from '../assets/img/arnau.webp';
 ---
 
 <Layout
 	title="Portfolio de Arnau Badenas - Desarrollador y programador web y videojuegos"
 	description="Contacta conmigo para colaborar en proyectos desarrollando webs o juegos accesibles para todos.">
-	<main>
+	<main class="px-4">
 		<SectionContainer
 			id="home"
-			class="py-44">
+			class="py-24 pb-16 lg:py-40 lg:pb-32">
 			<Image
-				class="rounded-full w-12 h-12"
+				class="rounded-full size-40 my-5"
 				src={profileImage}
 				alt="arnau"
 				loading="eager"
 			/>
 			<h1
-				class="text-white text-3xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-4">
+				class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row flex-wrap gap-x-4 pb-2 lg:pb-4">
 				¡Hola! Soy Arnau. <div class="flex justify-center items-center">
 					<Badge>Trabajemos juntos!</Badge>
 				</div>
 			</h1>
-			<h2 class="text-2xl opacity-80 text-wrap">
+			<h2 class="text-xl lg:text-2xl opacity-80 text-wrap max-w-[700px]">
 				<span class="text-orange-400/90"
 					>Desarrollador Web y técnico Informático.</span
 				>
@@ -41,27 +43,33 @@ import profileImage from '../assets/img/arnau.jpeg';
 				>
 			</h2>
 
-			<ul class="flex gap-x-4 mt-5">
+			<nav class="flex flex-wrap gap-4 mt-5">
 				<SocialPill
 					href="https://www.linkedin.com/in/arnau-badenas-vives/">
-					<LinkedInIcon class="size-6" />
+					<LinkedInIcon class="size-4 md:size-6" />
 					LinkedIn
 				</SocialPill>
 				<SocialPill href="https://github.com/ArnauBadenas">
-					<GithubIcon class="size-6" />
+					<GithubIcon class="size-4 md:size-6" />
 					Github
 				</SocialPill>
 				<SocialPill href="mailto:4bvives@gmail.com">
-					<GmailIcon class="size-6" />
+					<GmailIcon class="size-4 md:size-6" />
 					4bvives@gmail.com
 				</SocialPill>
-			</ul>
+			</nav>
 		</SectionContainer>
 		<SectionContainer id="experience">
-			<h2 class="text-2xl font-semibold flex gap-x-3 items-center pb-5">
+			<h2 class="text-3xl font-semibold flex gap-x-3 items-center pb-5">
 				<TieIcon class="size-7" /> Experiencia laboral
 			</h2>
 			<Experience />
+		</SectionContainer>
+		<SectionContainer id="projects">
+			<h2 class="text-3xl font-semibold flex gap-x-3 items-center pb-5">
+				<PromptIcon class="size-7" /> Proyectos
+			</h2>
+			<Projects />
 		</SectionContainer>
 	</main>
 </Layout>
