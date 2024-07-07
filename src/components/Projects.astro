@@ -1,6 +1,9 @@
 ---
 import CSHARPIcon from './icons/Csharp.astro';
 import UnityIcon from './icons/Unity.astro';
+import TypescriptIcon from './icons/TypeScript.astro';
+
+import santuarioAnimalHomeImage from '../assets/img/santuario-animal-home.png';
 
 const TAGS = {
 	CSHARP: {
@@ -12,6 +15,11 @@ const TAGS = {
 		name: 'Unity',
 		class: 'bg-black/80 text-white',
 		icon: UnityIcon,
+	},
+	TYPESCRIPT: {
+		name: 'Typescript',
+		class: 'bg-blue-800/70 text-white',
+		icon: TypescriptIcon,
 	},
 };
 
@@ -33,6 +41,23 @@ const PROJECTS = [
 		github: 'https://github.com/ArnauBadenas/GamejaNavideja2022',
 		image: 'https://img.itch.zone/aW1nLzEwOTM4NTQ5LnBuZw==/315x250%23c/9UyZ8b.png',
 		tags: [TAGS.UNITY, TAGS.CSHARP],
+	},
+	{
+		title: 'La balada del roh',
+		description:
+			'La Balada del Roh es un RPG/ Simulador inmersivo de un universo completamente distópico. Diseñado, programado y realizado para la Gameja 2021.',
+		link: 'https://riibber.itch.io/la-balada-del-roh-gameja-21',
+		github: 'https://github.com/La-gameja-navideja-2021/RepeatSlash',
+		image: 'https://img.itch.zone/aW1nLzY4MDE3MDIucG5n/315x250%23c/sl3ihW.png',
+		tags: [TAGS.UNITY, TAGS.CSHARP],
+	},
+	{
+		title: 'Santuario animal',
+		description:
+			'Página web para una protectora para dar a conocer a sus animales y facilitar la adopción y ayuda.',
+		github: 'https://github.com/PaulaGDopico/SantuarioAnimal',
+		image: santuarioAnimalHomeImage.src,
+		tags: [TAGS.TYPESCRIPT],
 	},
 ];
 ---
